@@ -6,7 +6,7 @@ if playing.lower() != "yes":
     quit()
 
 print("okay Lets play");
-score =0;
+score = 0;
 answer = input("What does GPU stand for? ")
 if answer.lower() == "graphics processing unit":
     print("Correct")
@@ -24,9 +24,9 @@ else:
 answer = input("what does means AI ? ")
 if answer.lower() =="ai":
     print("correct");
-    score+=1;
+    score+=1
 else:
     print("Incorrect")
 
-print("Your correct answer is " + str(score) + " questions")
- 
+print("Your correct answer is " +str(score) +" questions")
+
