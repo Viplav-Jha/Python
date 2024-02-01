@@ -12,10 +12,11 @@ if top_of_range.isdigit():
 else:
     print('Please type a number next time. ')
     quit()
+random_number = random.randint(0, top_of_range)  # Move this line inside the loop
+guesses=0
 
 while True:
-    random_number = random.randint(0, top_of_range)  # Move this line inside the loop
-
+    guesses +=1 
     user_guess = input("Make a guess: ")
     if user_guess.isdigit():
         user_guess = int(user_guess)
@@ -30,3 +31,5 @@ while True:
         print("Too high! Try again.")
     else:
         print("Too low! Try again.")
+        
+print("You got it in ", guesses, "guesses")
