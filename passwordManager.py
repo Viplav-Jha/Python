@@ -1,4 +1,12 @@
+from cryptography.fernet import Fernet
+
 master_pwd =input("What is the master passowrd? ")
+
+def write_key():
+    key = Fernet.generate_key()
+    with open("key.key","wb") as key_file:
+        key_file.write(key)
+
 
 def view():
     with open('passwords.txt', 'r') as f:
@@ -6,7 +14,7 @@ def view():
             data = line.strip().split("|")
             if len(data) == 2:
                 user, passw = data
-                print("User:", user, "Password:", passw)
+                print("User:", user, "| Password:", passw)
             else:
                 print("Invalid data format in the file:", line)
 
